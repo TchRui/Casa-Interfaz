@@ -1,0 +1,83 @@
+programa -> ¿ sentencias ?
+
+sentencias -> DeclaraVar
+sentencias -> comentario
+sentencias -> asignacion 
+sentencias -> operacion 
+sentencias -> mensaje
+sentencias -> insertar
+sentencias -> concatenar  
+
+declaravar -> derecha izquierda
+declaravar -> derecha izquierda sentencias
+
+derecha -> tipodato : nomvar
+izquierda -> = asignado ;
+izquierda -> ;
+
+asignado -> " lo que sea " 
+asignado -> valor
+asignado -> bole
+asignado -> : nomvar
+
+comentario -> # lo que sea
+comentario -> # lo que sea  sentencias
+
+mensaje -> SND " lo que sea " ;
+mensaje -> SND " lo que sea " ; sentencias
+
+insertar -> INS : nomvar ; 
+insertar -> INS : nomvar ; sentencias 
+
+operacion -> : nomvar = ecuacion ;
+operacion -> : nomvar = ecuacion ; sentencias
+
+ecuacion -> ( ecuacion )
+ecuacion -> termino operador termino
+ecuacion -> termino operador termino sigue 
+ecuacion -> termino
+
+sigue -> operador termino
+sigue -> operador termino sigue
+
+termino -> valor 
+termino -> parentesis
+
+parentesis -> ( ecuacion )
+
+valor -> numero
+valor -> : nomvar
+
+concatenar -> : nomvar = concatena , concatena ;
+concatenar -> : nomvar = concatena , concatena ; sentencais
+
+concatena -> :nomvar
+concatena -> " lo que sea "
+
+tipodato -> INT
+tipodato -> STR 
+tipodato -> FLT
+tipodato -> CHR
+tipodato -> BOL
+
+nomvar -> letra 
+nomvar -> letra (letra)*
+
+letra -> [a-z]
+
+numero -> numeros (numeros)*
+numero -> numeros (numeros)* . numeros (numeros)* 
+
+numeros -> [0-9]
+
+bole -> " TRUE "
+bole -> " FALSE "
+
+lo que sea -> acepta todo
+
+operador -> +
+operador -> -
+operador -> *
+operador -> /
+
+ """
