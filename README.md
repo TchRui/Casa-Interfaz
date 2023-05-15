@@ -9,4 +9,4 @@ _El proyecto se ha implementado utilizando el lenguaje de programación Python, 
 
 _El código fuente y la documentación completa se encuentran disponibles en este repositorio de GitHub, lo que permite a otros estudiantes y entusiastas de la programación interesados en la comunicación entre Python y Arduino, aprender, colaborar y mejorar el proyecto. Además, se incluyen ejemplos de uso y guías de instalación para facilitar la reproducción y comprensión del proyecto._
 
-## _Proyecto desarrollado por Alejandro Gordo Barajas👨‍💻
+## _Proyecto desarrollado por Alejandro Gordo Barajas👨‍💻_
