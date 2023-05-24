@@ -5,7 +5,9 @@ from tkinter import messagebox
 
 class Interface:
     def __init__(self):
-        ports = list(serial.tools.list_ports.comports())
+        self.arduino = serial.Serial('COM7', 9600)
+        self.ventana()
+        """ ports = list(serial.tools.list_ports.comports())
         print(ports)
         #* Creamos una excepción si no se puede conectar al puerto serial
         try:
@@ -13,7 +15,7 @@ class Interface:
             self.ventana()
         except:
             messagebox.showerror("Casa inteligente - Arduino", "No se pudo identificar al puerto serial. No se encontraron dispositivos conectados.")
-            exit()
+            exit() """
 
     
     def ventana(self):
@@ -32,7 +34,9 @@ class Interface:
 
         #Coloca la imágen de fondo
         imagen = PhotoImage(file="fondo.png")
-        fondo = Label(root, image=imagen).place(x=0, y=0, relwidth=1, relheight=1)
+        fondo = Label(root, image=imagen)
+        fondo.place(x=0, y=0, relwidth=1, relheight=1)
+
 
         self.boton_encender = Button(root, text="Encender LED", command=self.encender_led, )
         self.boton_encender.pack()
