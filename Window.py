@@ -5,7 +5,7 @@ from tkinter import messagebox
 
 class Interface:
     def __init__(self):
-        self.arduino = serial.Serial('COM7', 9600)
+        #self.arduino = serial.Serial('COM7', 9600)
         self.ventana()
         """ ports = list(serial.tools.list_ports.comports())
         print(ports)
@@ -38,18 +38,83 @@ class Interface:
         fondo.place(x=0, y=0, relwidth=1, relheight=1)
 
 
-        self.boton_encender = Button(root, text="Encender LED", command=self.encender_led, )
-        self.boton_encender.pack()
-        self.boton_apagar = Button(root, text="Apagar LED", command=self.apagar_led)
-        self.boton_apagar.pack()
+        self.boton_encender_a = Button(root, text="E", width=1, command=self.encender_led1)
+        self.boton_encender_a.place(x=863, y=321)
+        self.boton_apagar_a = Button(root, text="A", width=1, command=self.apagar_led1)
+        self.boton_apagar_a.place(x=863, y=293)
+        
+        self.boton_encender_b = Button(root, text="E", width=1, command=self.encender_led2)
+        self.boton_encender_b.place(x=765, y=321)
+        self.boton_apagar_b = Button(root, text="A", width=1, command=self.apagar_led2)
+        self.boton_apagar_b.place(x=783, y=321)
 
+        self.boton_encender_c = Button(root, text="E", width=1, command=self.encender_led3)
+        self.boton_encender_c.place(x=635, y=321)
+        self.boton_apagar_c = Button(root, text="A", width=1, command=self.apagar_led3)
+        self.boton_apagar_c.place(x=653, y=321)
+
+        self.boton_encender_d = Button(root, text="E", width=1, command=self.encender_led4)
+        self.boton_encender_d.place(x=560, y=228)
+        self.boton_apagar_d = Button(root, text="A", width=1, command=self.apagar_led4)
+        self.boton_apagar_d.place(x=578, y=228)
+
+        self.boton_encender_e = Button(root, text="E", width=1, command=self.encender_led5)
+        self.boton_encender_e.place(x=350, y=228)
+        self.boton_apagar_e = Button(root, text="A", width=1, command=self.apagar_led5)
+        self.boton_apagar_e.place(x=368, y=228)
+
+        self.boton_encender_f = Button(root, text="E", width=1, command=self.encender_led6)
+        self.boton_encender_f.place(x=290, y=152)
+        self.boton_apagar_f = Button(root, text="A", width=1, command=self.apagar_led6)
+        self.boton_apagar_f.place(x=290, y=180)
+
+        self.boton_encender_g = Button(root, text="E", width=1, command=self.encender_led7)
+        self.boton_encender_g.place(x=520, y=158)
+        self.boton_apagar_g = Button(root, text="A", width=1, command=self.apagar_led7)
+        self.boton_apagar_g.place(x=538, y=158)
         root.mainloop()
     
-    def encender_led(self):
-        self.arduino.write(b'H')
+    def encender_led1(self):
+        self.arduino.write(b'A')
 
-    def apagar_led(self):
-        self.arduino.write(b'L')
+    def apagar_led1(self):
+        self.arduino.write(b'a')
 
+    def encender_led2(self):
+        self.arduino.write(b'B')
+    
+    def apagar_led2(self):
+        self.arduino.write(b'b')
+    
+    def encender_led3(self):
+        self.arduino.write(b'C')
+    
+    def apagar_led3(self):
+        self.arduino.write(b'c')
+    
+    def encender_led4(self):
+        self.arduino.write(b'D')
+    
+    def apagar_led4(self):
+        self.arduino.write(b'd')
+    
+    def encender_led5(self):
+        self.arduino.write(b'E')
+    
+    def apagar_led5(self):
+        self.arduino.write(b'e')
+    
+    def encender_led6(self):
+        self.arduino.write(b'F')
+    
+    def apagar_led6(self):
+        self.arduino.write(b'f')
+    
+    def encender_led7(self):
+        self.arduino.write(b'G')
+    
+    def apagar_led7(self):
+        self.arduino.write(b'g')
+    
 if __name__ == "__main__":
     interface_object = Interface()
