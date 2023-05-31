@@ -5,7 +5,7 @@ from tkinter import messagebox
 
 class Interface:
     def __init__(self):
-        #self.arduino = serial.Serial('COM7', 9600)
+        self.arduino = serial.Serial('COM7', 9600)
         self.ventana()
         """ ports = list(serial.tools.list_ports.comports())
         print(ports)
@@ -37,7 +37,6 @@ class Interface:
         fondo = Label(root, image=imagen)
         fondo.place(x=0, y=0, relwidth=1, relheight=1)
 
-
         self.boton_encender_a = Button(root, text="E", width=1, command=self.encender_led1)
         self.boton_encender_a.place(x=863, y=321)
         self.boton_apagar_a = Button(root, text="A", width=1, command=self.apagar_led1)
@@ -54,9 +53,9 @@ class Interface:
         self.boton_apagar_c.place(x=653, y=321)
 
         self.boton_encender_d = Button(root, text="E", width=1, command=self.encender_led4)
-        self.boton_encender_d.place(x=560, y=228)
+        self.boton_encender_d.place(x=560, y=158)
         self.boton_apagar_d = Button(root, text="A", width=1, command=self.apagar_led4)
-        self.boton_apagar_d.place(x=578, y=228)
+        self.boton_apagar_d.place(x=578, y=158)
 
         self.boton_encender_e = Button(root, text="E", width=1, command=self.encender_led5)
         self.boton_encender_e.place(x=350, y=228)
@@ -69,9 +68,9 @@ class Interface:
         self.boton_apagar_f.place(x=290, y=180)
 
         self.boton_encender_g = Button(root, text="E", width=1, command=self.encender_led7)
-        self.boton_encender_g.place(x=520, y=158)
+        self.boton_encender_g.place(x=200, y=321)
         self.boton_apagar_g = Button(root, text="A", width=1, command=self.apagar_led7)
-        self.boton_apagar_g.place(x=538, y=158)
+        self.boton_apagar_g.place(x=218, y=321)
         root.mainloop()
     
     def encender_led1(self):
